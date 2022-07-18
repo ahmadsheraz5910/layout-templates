@@ -1,0 +1,45 @@
+$primary-color:#E02424;
+$secondary-color:#057A55;
+$grey:#4B5563;
+$grey-200:#E5E7EB;
+$grey-500:#6B7280;
+$error-color: #d32f2f;
+$error-color-light:#ffac978e;
+$gradient-success:linear-gradient(90deg,#84d9d2,#07cdae);
+$gradient-error:linear-gradient(90deg,#ffbf96,#fe7096);
+
+
+$spacing-xs: 16px;
+$spacing-sm: 24px;
+$spacing-md: 32px;
+$spacing-lg: 64px;
+$spacing-xlg: 96px;
+$spacing-2xlg: 128px;
+
+$text-xs:12px;
+$text-sm:14px;
+$text-base:16px;
+$text-lg:18px;
+$text-xl:20px;
+$text-2xl:24px;
+
+
+
+@mixin greater-than-phone {
+    @media (min-width: 599px) { @content; }
+}
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet {
+    @media (max-width: 768px) { @content; }
+}
+@mixin greater-than-tablet {
+    @media (min-width: 900px) { @content; }
+}
+@mixin greater-than-desktop {
+    @media (min-width: 1024px) { @content; }
+}
+@mixin greater-than-large-desktop {
+    @media (min-width: 1200px) { @content; }
+}
