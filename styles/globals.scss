@@ -15,11 +15,16 @@ a {
     color:$primary-color;
   }
 }
+p {
+  color:$grey-900;
+}
 
 * {
   box-sizing: border-box;
 }
-
+.menu-item {
+  padding:$spacing-xs $spacing-sm;
+}
 header {
   //padding:$spacing-sm $spacing-lg;
   border-bottom: 1px solid $grey-200;
