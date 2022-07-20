@@ -34,9 +34,9 @@ const Layout = ({children}: Props) => {
         </Head>
         <Header HamburgerComponent={<Hamburger />} />
         <Box className = {styles.container}>
-            <Box component="nav" className = {styles.nav}>
+            <Box component="nav" className = {styles.nav}>                
                 <Drawer variant="temporary" 
-                    className = {styles.drawer_temporary}
+                    className = {styles.drawer + " " + styles.temporary}
                     ModalProps={{ 
                         keepMounted: true, // Better open performance on mobile.
                     }}
@@ -45,7 +45,7 @@ const Layout = ({children}: Props) => {
                     sx={{'& .MuiDrawer-paper': { boxSizing: 'border-box', width: styles.drawer_width + 'px' }}} >
                     <SideBar />
                 </Drawer>
-                <Box className = {styles.drawer_fixed}>
+                <Box className = {styles.drawer + " " + styles.fixed}>
                     <SideBar />
                 </Box>
             </Box>

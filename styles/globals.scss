@@ -18,7 +18,9 @@ a {
 p {
   color:$grey-900;
 }
-
+nav {
+  border-right: 1px solid $grey-200;
+}
 * {
   box-sizing: border-box;
 }
