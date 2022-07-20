@@ -1,0 +1,50 @@
+@import "../../../styles/_variables.scss";
+$drawer-width:240;
+$drawer-width-px:240px;
+    
+:export {
+    drawer_width:$drawer-width;    
+}
+.main {
+    flex-grow:1;
+    padding:$spacing-sm;
+    @include greater-than-phone(){
+        width:calc(100% - $drawer-width-px);
+        margin-left: $drawer-width-px;
+    }
+}
+.nav {
+    position:fixed;
+    height: 100%;
+    @include greater-than-phone(){
+        width: $drawer-width-px;
+    }
+}
+.container {
+    display: flex;
+}
+
+.drawer {
+
+    &_fixed {
+        height: 100%;
+        display: none;
+        @include greater-than-phone(){
+            display: block;
+        }
+    }
+    &_temporary {
+        height: 100%;
+        display: block;
+        @include greater-than-phone(){
+            display: none;
+        }
+
+    }
+}
+.hamburger_icon {
+    margin-right: $spacing-sm;
+    @include greater-than-phone(){
+        display: none;
+    }
+}

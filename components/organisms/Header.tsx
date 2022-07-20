@@ -5,7 +5,9 @@ import Logo from "../../public/assets/sm-text-logo-red.svg";
 import Image from 'next/image'
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-type Props = {}
+type Props = {
+  HamburgerComponent?:React.ReactElement
+}
 
 const settings = ['Your Profile', 'Settings', 'Sign Out'];
 const NavLinks = [
@@ -31,20 +33,12 @@ const NavLinks = [
   }
 ]
 
-const Header = (props: Props) => {
+const Header = ({HamburgerComponent}: Props) => {
   const router = useRouter()
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
   };
 
   const handleCloseUserMenu = () => {
@@ -54,10 +48,8 @@ const Header = (props: Props) => {
   return (
     <Box component = "header">
         <Toolbar>
-          <IconButton>
-            <Image src = {MenuIcon} />
-          </IconButton>
-          <Box sx = {{mr:8, ml:8}}>
+          {HamburgerComponent}
+          <Box sx = {{mr:8}}>
             <Image src = {Logo} />
           </Box>
           <Stack flexGrow = {1} spacing = {4} direction = "row" component = "nav">            
