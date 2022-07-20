@@ -8,14 +8,14 @@ $drawer-width-px:240px;
 .main {
     flex-grow:1;
     padding:$spacing-sm;
-    @include greater-than-phone(){
+    @include greater-than-tablet(){
         width:calc(100% - $drawer-width-px);
         margin-left: $drawer-width-px;
     }
 }
 .nav {
     position:fixed;
-    @include greater-than-phone(){
+    @include greater-than-tablet(){
         width: $drawer-width-px;
         height: calc(100% - 65px);
     }
@@ -28,13 +28,13 @@ $drawer-width-px:240px;
     height: 100%;
     &.fixed {
         display: none;
-        @include greater-than-phone(){
+        @include greater-than-tablet(){
             display: block;
         }
     }
     &.temporary {
         display: block;
-        @include greater-than-phone(){
+        @include greater-than-tablet(){
             display: none;
         }
 
@@ -42,7 +42,7 @@ $drawer-width-px:240px;
 }
 .hamburger_icon {
     margin-right: $spacing-sm;
-    @include greater-than-phone(){
+    @include greater-than-tablet(){
         display: none;
     }
 }
